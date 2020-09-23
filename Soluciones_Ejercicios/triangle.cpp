@@ -21,7 +21,6 @@ void leer(){
         memset(memo, -1, sizeof (memo));
 }
 
-//Tenemos 16 de RAM benjabb :3
 
 long long int DP(int index){
     if(triangulo[index].nivel==n) return triangulo[index].valor;
@@ -33,8 +32,6 @@ long long int DP(int index){
     long long int suma;
     long long int izquierda = triangulo[index].valor+DP(index+triangulo[index].nivel);
     long long int derecha = triangulo[index].valor+DP(index+triangulo[index].nivel +1);
-    //No veo al Benja escribir :P
-    //Va con lag xd
     return memo[index]=max(izquierda,derecha);
 }
 
